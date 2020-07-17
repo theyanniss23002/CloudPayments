@@ -17,29 +17,29 @@ ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
 // })
 
 // TweenLite.defaultEase = Linear.easeNone;
-let controller = new ScrollMagic.Controller();
-let tl = new TimelineMax();
-tl.staggerFrom(".box", 1.5, {
-    scale: 0,
-    cycle: {
-        y: [-50, 50]
-    },
-    stagger: {
-        from: "center",
-        amount: 0.75
-    }
-});
-
-let scene = new ScrollMagic.Scene({
-    triggerElement: ".intro",
-    duration: "50%",
-    triggerHook: 0.25
-})
-    .addIndicators({
-        name: "Box Timeline",
-        colorTrigger: "white",
-        colorStart: "white",
-        colorEnd: "white"
-    })
-    .setTween(tl)
-    .addTo(controller);
+// let controller = new ScrollMagic.Controller();
+// let tl = new TimelineMax();
+// tl.staggerFrom(".box", 1.5, {
+//     scale: 0,
+//     cycle: {
+//         y: [-50, 50]
+//     },
+//     stagger: {
+//         from: "center",
+//         amount: 0.75
+//     }
+// });
+//
+// let scene = new ScrollMagic.Scene({
+//     triggerElement: ".intro",
+//     duration: "50%",
+//     triggerHook: 0.25
+// })
+//     .addIndicators({
+//         name: "Box Timeline",
+//         colorTrigger: "white",
+//         colorStart: "white",
+//         colorEnd: "white"
+//     })
+//     .setTween(tl)
+//     .addTo(controller);
