@@ -2,19 +2,29 @@
 @import 'utils/fonts'
 @import 'utils/vars'
 @import 'utils/media'
+@import 'places/intro'
+@import 'places/universe'
+
+html
+  height: 100%
+  overflow: hidden
+  overflow-y: scroll
+  overflow-x: hidden
 
 body
   margin: 0
   padding: 0
-  height: 100vh
-  display: flex
-  align-items: center
   position: relative
+  background: #091627
+  perspective: 1px
+  transform-style: preserve-3d
+  overflow-x: hidden
+  overflow-y: scroll
+  height: inherit
 
 section
-  padding: 0 15px
   width: 100%
-  display: flex
+  min-height: 100vh
 
 *, *:before, *:after
   box-sizing: border-box

@@ -1,0 +1,165 @@
+.universe
+  position: relative
+  transform-style: inherit
+  overflow: hidden
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    top: 0
+    z-index: -1
+    transform-origin: center
+    //min-height: 100vw
+    object-position: 0 0
+    background-image: url('/src/image/bg.png')
+    background-repeat: no-repeat
+    background-size: cover
+    transform: translateZ(-1px) scale(2)
+  &__character
+    position: relative
+    display: block
+    margin: auto
+    width: 100%
+    height: 100vh
+    &-img
+      position: absolute
+  &__click
+    background-image: url('/src/image/ellipse.png')
+    background-repeat: no-repeat
+    background-size: cover
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 20%
+    //padding-bottom: 20px
+    display: flex
+    align-items: flex-end
+    line-height: 80px
+    z-index: -1
+    justify-content: center
+    background-position: center
+    &-title
+      color: #BCD2E2
+      font-family: $regularFont
+      text-transform: uppercase
+      font-size: 2vw
+
+.plant
+  top: 0
+  left: 0
+  width: 19vw
+
+.hand
+  top: 37%
+  left: 2%
+  width: 7vw
+
+.donut
+  top: 50%
+  left: 8%
+  width: 6vw
+
+.coin
+  top: 3%
+  left: 6%
+  width: 31vw
+
+.octopus
+  top: 0
+  left: 36%
+  width: 22vw
+
+.cat
+  top: 19%
+  left: 40%
+  width: 9vw
+
+.dog
+  top: 3%
+  width: 7vw
+  left: 53%
+
+.boom
+  top: 1%
+  right: 22%
+  width: 20vw
+
+.twister
+  top: 4%
+  right: 12%
+  width: 10vw
+
+.eye
+  top: 2%
+  right: 2%
+  width: 6vw
+
+.jaws
+  top: 15%
+  right: 1%
+  width: 16vw
+
+.ufo
+  top: 43%
+  right: -1%
+  width: 13vw
+
+.star
+  top: 21%
+  right: 13%
+  width: 9vw
+
+.gold
+  top: 78%
+  right: 3%
+  width: 14vw
+
+.worm
+  top: 65%
+  right: 10%
+  width: 8vw
+
+.trash
+  top: 54%
+  right: 24%
+  width: 21vw
+
+.sun
+  top: 27%
+  right: 41%
+  width: 25vw
+
+.rocket
+  top: 35%
+  right: 19%
+  width: 17vw
+
+.goblin
+  top: 68%
+  right: 48%
+  width: 11vw
+
+.ship
+  top: 43%
+  width: 26vw
+  left: 13%
+
+.robot
+  top: 63%
+  left: 1%
+  width: 18vw
+
+.cube
+  top: 66%
+  left: 19%
+  width: 17vw
+
+.mini-rocket
+  top: 85%
+  left: 15%
+  width: 6vw
