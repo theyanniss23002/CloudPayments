@@ -1,0 +1,120 @@
+.carousel-case
+  background: #fff
+
+.slider
+  position: relative
+  height: 100vh
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  &__box
+    position: absolute
+    bottom: 2%
+    right: 2%
+    z-index: 20
+    &-prev
+      width: 8vw
+      height: 7vh
+      background: #06223B
+      border: 0
+      cursor: pointer
+      background: linear-gradient(45deg, transparent 1vw, #06223B 0) bottom left
+      transition: .2s
+      &::before
+        content: ''
+        display: block
+        margin: 0 auto
+        width: 1vw
+        background-size: 1vw
+        height: 1.7vw
+        background-repeat: no-repeat
+        background-image: url('/src/image/arrow-left.svg')
+      &:hover
+        background: linear-gradient(45deg, transparent 1vw, #F7DF14 0) bottom left
+        transition: .3s
+    &-next
+      width: 8vw
+      height: 7vh
+      background: #06223B
+      border: 0
+      cursor: pointer
+      background: linear-gradient(-45deg, transparent 1vw, #06223B 0) top right
+      transition: .2s
+      &::before
+        content: ''
+        display: block
+        margin: 0 auto
+        width: 1vw
+        background-size: 1vw
+        height: 1.7vw
+        background-repeat: no-repeat
+        background-image: url('/src/image/arrow-right.svg')
+      &:hover
+        background: linear-gradient(-45deg, transparent 1vw, #F7DF14 0) top right
+        transition: .3s
+
+.slideshow
+  &__img
+    width: 100vw
+    height: 85vh
+  &__card
+    &-desc
+      position: relative
+      height: 15vh
+      background: #000
+      display: flex
+      align-items: center
+      padding: 0 3vw
+      &-title
+        font-size: 1.8vw
+        color: #fff
+        font-weight: bold
+        font-family: $sliderFont
+      &-info
+        font-size: 0.8vw
+        color: #B6B7B5
+        line-height: 1.6vh
+        padding-top: 1vh
+        font-family: $sliderFont
+      &-wrap
+        display: flex
+        flex-direction: column
+        margin-left: 2vw
+        max-width: 39vw
+        width: 100%
+      &-img
+        width: 7vw
+      &-link
+        position: absolute
+        bottom: 17%
+        right: 3%
+        font-size: 1.1vw
+        color: #5EB1FF
+        text-decoration: underline
+        transition: .4s
+        font-family: $sliderFont
+        &:hover
+          color: #F7DF14
+          transition: .2s
+      &-close
+        width: 3.5vw
+        height: 6vh
+        display: flex
+        align-items: center
+        background: #072847
+        position: absolute
+        top: 0
+        right: 0
+        transition: .4s
+        &:before
+          content: ''
+          display: block
+          margin: 0 auto
+          width: 1vw
+          background-size: 1vw
+          height: 1.2vw
+          background-repeat: no-repeat
+          background-image: url('/src/image/close.svg')
+        &:hover
+          background: #5EB1FF
+          transition: .2s
