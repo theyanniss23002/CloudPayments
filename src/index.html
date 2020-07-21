@@ -8,6 +8,9 @@
     <title>Эк и Вайринг</title>
 </head>
 <body>
+<div id="rotation" class="rotation">
+    <img src="src/image/Rotation.svg" class="rotation__svg" alt="rotation">
+</div>
 <!--   INTRO SECTION-->
 <section class="intro">
     <div class="wrap">
@@ -38,6 +41,7 @@
         </div>
     </div>
 </section>
+<div class="anchor"></div>
 <!--   UNIVERSE SECTION-->
 <section class="universe">
     <div class="wrap character-cell">
@@ -45,11 +49,15 @@
             <img data-speed="2" class="plant universe__character-img" src="./src/image/character/plant.png" alt="растение">
             <img data-speed="2" class="hand universe__character-img" src="./src/image/character/hand.png" alt="рука">
             <img data-speed="3" class="donut universe__character-img" src="./src/image/character/donut.png" alt="пончик">
-            <img data-speed="1" class="coin universe__character-img" src="./src/image/character/coin.png" alt="монета">
+                <div data-speed="2" class="coin-wrap universe__character-img">
+                    <img class="coin" src="./src/image/character/coin.png" alt="монета">
+                </div>
             <img data-speed="2" class="octopus universe__character-img" src="./src/image/character/octopus.png" alt="осьминог">
             <img data-speed="6" class="cat universe__character-img" src="./src/image/character/cat.png" alt="кот">
             <img data-speed="1" class="dog universe__character-img" src="./src/image/character/dog.png" alt="собака">
-            <img data-speed="2" class="boom universe__character-img" src="./src/image/character/boom.png" alt="бум">
+                <div data-speed="2" class="boom-wrap universe__character-img">
+                    <img class="boom" src="./src/image/character/boom.png" alt="бум">
+                </div>
             <img data-speed="3" class="twister universe__character-img" src="./src/image/character/twister.png" alt="твистер">
             <img data-speed="2" class="eye universe__character-img" src="./src/image/character/eye.png" alt="глаз">
             <img data-speed="1" class="jaws universe__character-img" src="./src/image/character/jaws.png" alt="пасть">
@@ -57,13 +65,21 @@
             <img data-speed="1" class="star universe__character-img" src="./src/image/character/star.png" alt="звезда">
             <img data-speed="2" class="gold universe__character-img" src="./src/image/character/gold.png" alt="золото">
             <img data-speed="4" class="worm universe__character-img" src="./src/image/character/worm.png" alt="червь">
-            <img data-speed="3" class="trash universe__character-img" src="./src/image/character/trash.png" alt="мусор">
+                <div data-speed="3" class="trash-wrap universe__character-img">
+                    <img class="trash" src="./src/image/character/trash.png" alt="мусор">
+                </div>
             <img data-speed="4" class="sun universe__character-img" src="./src/image/character/sun.png" alt="солнце">
-            <img data-speed="2" class="rocket universe__character-img" src="./src/image/character/rocket.png" alt="ракета">
+                <div data-speed="3" class="rocket-wrap universe__character-img">
+                    <img class="rocket" src="./src/image/character/rocket.png" alt="ракета">
+                </div>
             <img data-speed="3" class="goblin universe__character-img" src="./src/image/character/goblin.png" alt="гоблин">
-            <img data-speed="3" class="ship universe__character-img" src="./src/image/character/ship.png" alt="корабль">
+                <div data-speed="3" class="ship-wrap universe__character-img">
+                    <img class="ship" src="./src/image/character/ship.png" alt="корабль">
+                </div>
             <img data-speed="2" class="robot universe__character-img" src="./src/image/character/robot.png" alt="робот">
-            <img data-speed="3" class="cube universe__character-img" src="./src/image/character/cube.png" alt="куб">
+                <div data-speed="3" class="cube-wrap universe__character-img">
+                    <img class="cube" src="./src/image/character/cube.png" alt="куб">
+                </div>
             <img data-speed="5" class="mini-rocket universe__character-img" src="./src/image/character/mini-rocket.png" alt="мини-ракета">
         </div>
         <div class="universe__click">
@@ -163,10 +179,10 @@
                             <img class="coin-chameleon-7" src="/src/image/sliders/coin-slider/coin-chameleon-7.png" alt="хамелеон">
                         </div>
                         <img class="coin-ball" src="/src/image/sliders/coin-slider/coin-ball.png" alt="шар">
-                            <div class="coin-ball-hover">
-                                <span class="coin-ball-hover-title">IOJWQOJOFSAOJFOIEJFA</span>
-                                <span class="coin-ball-hover-subtitle">IOJWQOJOFSAOJFOIEJFA</span>
-                            </div>
+                        <div class="coin-ball-hover">
+                            <span class="coin-ball-hover-title">IOJWQOJOFSAOJFOIEJFA</span>
+                            <span class="coin-ball-hover-subtitle">IOJWQOJOFSAOJFOIEJFA</span>
+                        </div>
                         <img class="coin-hand" src="/src/image/sliders/coin-slider/coin-hand.png" alt="рука">
                     </div>
                 </div>
