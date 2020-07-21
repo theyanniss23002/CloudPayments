@@ -23,7 +23,7 @@ $slickElement.slick({
 
 
 $(function() {
-    $(".octopus").click(function() {
+    $(".coin-wrap").click(function() {
         $('.character-cell').fadeOut(0)
         $(".carousel-case").fadeIn(500);
     });
