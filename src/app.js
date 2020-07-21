@@ -6,11 +6,5 @@ import 'animate.css/animate.min.css'
 import './parallaxMouseMove'
 import './parallaxWithScroll'
 import './sliderConfiguration'
-
-//dependence imports
-import $ from 'jquery'
-import * as ScrollMagic from "scrollmagic"; // Or use scrollmagic-with-ssr to avoid server rendering problems
-import { TweenMax, TimelineMax } from "gsap";// Also works with TweenLite and TimelineLite
-import { ScrollMagicPluginGsap } from "scrollmagic-plugin-gsap";
-ScrollMagicPluginGsap(ScrollMagic, TweenMax, TimelineMax);
-
+import './gsap'
+import './common'
