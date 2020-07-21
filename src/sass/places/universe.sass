@@ -13,7 +13,7 @@
     z-index: -1
     transform-origin: center
     object-position: 0 0
-    background-image: url('/src/image/bg.png')
+    background-image: url('/src/image/bg.jpg')
     background-repeat: no-repeat
     background-size: cover
     transform: translateZ(-1px) scale(2)
@@ -37,7 +37,7 @@
     height: 20%
     display: flex
     align-items: flex-end
-    line-height: 80px
+    line-height: 8vh
     z-index: -1
     justify-content: center
     background-position: center
@@ -51,36 +51,43 @@
   top: 0
   left: 0
   width: 19vw
+  transition: .1s
 
 .hand
-  top: 37%
-  left: 2%
-  width: 7vw
+  top: 38%
+  left: 3%
+  width: 6vw
+  transition: .3s
 
 .donut
-  top: 50%
-  left: 8%
-  width: 6vw
+  top: 52%
+  left: 11%
+  width: 5vw
+  transition: .1s
 
 .coin
-  top: 3%
-  left: 6%
-  width: 31vw
+  top: 2%
+  left: 5%
+  width: 30vw
+  display: inline-block
+  overflow: hidden
+  transition: .1s
+  cursor: pointer
   &:hover
-    background-image: url("/src/image/character/hover-coin.svg")
-    background-size: cover
-    background-repeat: no-repeat
-    width: 31vw
+    transition: .1s
+    transform: scale(1.2)
 
 .octopus
   top: 0
-  left: 36%
-  width: 22vw
+  left: 37%
+  width: 21vw
+  transition: .2s
 
 .cat
-  top: 19%
-  left: 40%
-  width: 9vw
+  top: 22%
+  left: 36%
+  width: 8vw
+  transition: .2s
 
 .dog
   top: 3%
@@ -89,81 +96,101 @@
 
 .boom
   top: 1%
-  right: 22%
-  width: 20vw
+  right: 20%
+  width: 19vw
+  cursor: pointer
+  transition: .2s
 
 .twister
   top: 4%
-  right: 12%
+  right: 8%
   width: 10vw
+  transition: .4s
 
 .eye
   top: 2%
-  right: 2%
+  right: 0%
   width: 6vw
+  transition: .3s
 
 .jaws
   top: 15%
-  right: 1%
-  width: 16vw
-  cursor: pointer
+  right: 0
+  width: 15vw
+  transition: .1s
 
 .ufo
-  top: 43%
-  right: -1%
-  width: 13vw
+  top: 45%
+  right: -2%
+  width: 12vw
+  transition: .4s
 
 .star
-  top: 21%
-  right: 13%
-  width: 9vw
+  top: 22%
+  right: 12%
+  width: 8vw
+  transition: .1s
 
 .gold
-  top: 78%
-  right: 3%
-  width: 14vw
+  top: 69%
+  right: 10%
+  width: 12vw
+  transition: .2s
 
 .worm
-  top: 65%
-  right: 10%
-  width: 8vw
+  top: 60%
+  right: 5%
+  width: 7vw
+  transition: .1s
 
 .trash
-  top: 54%
-  right: 24%
-  width: 21vw
+  top: 46%
+  right: 25%
+  width: 20vw
+  cursor: pointer
+  transition: .5s
 
 .sun
-  top: 27%
-  right: 41%
-  width: 25vw
+  top: 25%
+  right: 43%
+  width: 23vw
+  transition: .2s
 
 .rocket
   top: 35%
-  right: 19%
+  right: 15%
   width: 17vw
+  cursor: pointer
+  transition: .1s
 
 .goblin
-  top: 68%
-  right: 48%
-  width: 11vw
+  top: 65%
+  right: 45%
+  width: 10vw
+  transition: .3s
 
 .ship
-  top: 43%
-  width: 26vw
-  left: 13%
+  top: 42%
+  width: 24vw
+  left: 15%
+  cursor: pointer
+  transition: .2s
 
 .robot
   top: 63%
   left: 1%
-  width: 18vw
+  width: 16vw
+  transition: .4s
 
 .cube
   top: 66%
-  left: 19%
-  width: 17vw
+  left: 20%
+  width: 16vw
+  cursor: pointer
+  transition: .1s
 
 .mini-rocket
   top: 85%
   left: 15%
-  width: 6vw
+  width: 5vw
+  transition: .2s

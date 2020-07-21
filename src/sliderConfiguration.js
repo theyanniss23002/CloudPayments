@@ -1,13 +1,7 @@
 import $ from 'jquery'
 require('slick-carousel')
 
-// let $status = $('.slider__numb');
 let $slickElement = $('.slideshow');
-
-// $slickElement.on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-//     let i = (currentSlide ? currentSlide : 0) + 1;
-//     $status.text(i + ' / ' + slick.slideCount);
-// });
 
 $slickElement.slick({
     autoplay: false,
@@ -25,4 +19,16 @@ $slickElement.slick({
             }
         }
     ]
+});
+
+
+$(function() {
+    $(".octopus").click(function() {
+        $('.character-cell').fadeOut(0)
+        $(".carousel-case").fadeIn(500);
+    });
+    $(".slide-close").click(function() {
+        $(".carousel-case").fadeOut(0);
+        $('.character-cell').fadeIn(500)
+    });
 });

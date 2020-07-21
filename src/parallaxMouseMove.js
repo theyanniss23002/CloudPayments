@@ -3,7 +3,7 @@ function parallaxMouseMove(event) {
         let x = event.clientX / window.innerWidth;
         let y = event.clientY / window.innerHeight;
         let speed = star.getAttribute('data-speed')
-        star.style.transform = 'translate(-' + x * speed + 'px, -' + y * speed + 'px)'
+        star.style.transform = 'translate(-' + x * speed + 'vw, -' + y * speed + 'vh)'
     });
 }
 
