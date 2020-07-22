@@ -27,7 +27,7 @@ npm install {all dependence} --save
     gsap
     jquery
     scrollmagic
-    scrollmagic-plugin-gsap
+    slick-carousel
 #
 How to use
 -

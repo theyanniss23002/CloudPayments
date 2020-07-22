@@ -111,44 +111,46 @@
     width: 6vw
 
 .img
+  //transform: translateZ(0.2px) scale(0.8)
   &__top
     &-middle
       top: 8%
       right: 45%
       width: 14vw
-      transform: translateZ(0.2px) scale(0.8)
+      z-index: 900
+      transition: all 0.3s ease 0s
     &-right
       top: 7%
       right: 0
       width: 14vw
-      transform: translateZ(0.2px) scale(0.8)
+      transition: all 0.1s ease 0s
   &__middle
     &-middle
       top: 45%
       left: 0
       width: 14vw
-      transform: translateZ(0.2px) scale(0.8)
+      transition: all 0.2s ease 0s
   &__bottom
     &-left
       width: 3vw
       bottom: 10%
       left: 20%
-      transform: translateZ(0.2px) scale(0.8)
+      transition: all 0.4s ease 0s
     &-middle
       width: 9vw
       left: 40%
       bottom: 15%
-      transform: translateZ(0.2px) scale(0.8)
+      transition: all 0.1s ease 0s
     &-right
       width: 8vw
       bottom: 13%
       right: 14%
-      transform: translateZ(0.2px) scale(0.8)
+      transition: all 0.2s ease 0s
     &-null
       width: 3vw
       bottom: 7%
       right: 5%
-      transform: translateZ(0.2px) scale(0.8)
+      transition: all 0.1s ease 0s
 
 .animate__pulse
   --animate-duration: 2s

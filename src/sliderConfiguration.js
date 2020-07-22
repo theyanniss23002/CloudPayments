@@ -21,14 +21,19 @@ $slickElement.slick({
     ]
 });
 
+$('div[data-slide]').click(function(e) {
+    e.preventDefault();
+    let slideno = $(this).data('slide');
+    $('.slideshow').slick('slickGoTo', slideno - 1);
+});
 
 $(function() {
-    $(".coin-wrap").click(function() {
+    $(".coin-wrap, .boom-wrap, .trash-wrap, .cube-wrap").click(function() {
         $('.character-cell').fadeOut(0)
-        $(".carousel-case").fadeIn(500);
+        $(".carousel-case").fadeIn(700);
     });
     $(".slide-close").click(function() {
         $(".carousel-case").fadeOut(0);
-        $('.character-cell').fadeIn(500)
+        $('.character-cell').fadeIn(1000)
     });
 });
