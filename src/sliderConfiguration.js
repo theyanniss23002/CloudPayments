@@ -1,5 +1,5 @@
 import $ from 'jquery'
-require('slick-carousel')
+require('slick-carousel');
 
 let $slickElement = $('.slideshow');
 
