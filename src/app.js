@@ -11,4 +11,4 @@ import './verticalAdaptive'
 
 //gsap imports
 import './scrollingLetters'
-import './dialog'
+import './dialogueBetweenAnimals'
