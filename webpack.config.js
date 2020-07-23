@@ -14,6 +14,13 @@ module.exports = {
             test: /\.css$/,
             use: [MiniCssExtractPlugin.loader, 'css-loader']
         },
+            {
+                test: /\.(jpg|png|svg)$/,
+                loader: 'file-loader',
+                options: {
+                    name: 'images/[name].[ext]'
+                },
+            },
         {
             test: /\.sass$/,
             use: [
@@ -46,5 +53,5 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: 'app.css'
         })
-    ]
+    ],
 }

@@ -19,6 +19,7 @@ npm install {all dependence} --save-dev
     webpack
     webpack-cli
     webpack-dev-server
+    file-loader
 #
 
 npm install {all dependence} --save

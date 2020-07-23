@@ -57,12 +57,12 @@
 .slideshow
   &__img
     width: 100vw
-    height: 85vh
+    height: 88vh
   &__card
     position: relative
     &-desc
       position: relative
-      height: 15vh
+      height: 12vh
       background: rgba(0, 0, 0, 0.3)
       display: flex
       align-items: center
@@ -71,18 +71,18 @@
         font-size: 1.8vw
         color: #fff
         font-weight: bold
-        font-family: $sliderFont
+        font-family: $sliderBold
       &-info
-        font-size: 0.8vw
+        font-size: 1vw
         color: #B6B7B5
         line-height: 1.6vh
         padding-top: 1vh
-        font-family: $sliderFont
+        font-family: $sliderNormal
       &-wrap
         display: flex
         flex-direction: column
         margin-left: 2vw
-        max-width: 39vw
+        max-width: 46vw
         width: 100%
       &-img
         width: 7vw
@@ -94,7 +94,7 @@
         color: #5EB1FF
         text-decoration: underline
         transition: .4s
-        font-family: $sliderFont
+        font-family: $sliderNormal
         &:hover
           color: #F7DF14
           transition: .2s
@@ -125,7 +125,7 @@
   position: relative
   &-ring
     position: absolute
-    top: 15%
+    top: 12%
     left: 0
     width: 97vw
     height: 31.3vh
@@ -146,12 +146,12 @@
       background: rgba(0,0,0,.8)
       transform: translate(-50%,1em)
       transition: all .15s ease-in-out
-      border: 0.2vw solid #fff
+      border: 0.1vw solid #fff
   &-shuttle
     position: absolute
-    width: 18vw
-    left: 18%
-    top: 15%
+    width: 21vw
+    left: 17%
+    top: 12%
     &:hover + .coin-shuttle-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -169,7 +169,7 @@
       background: rgba(0,0,0,.8)
       transform: translate(-50%,1em)
       transition: all .15s ease-in-out
-      border: 0.2vw solid #fff
+      border: 0.1vw solid #fff
   &-mobile
     &-1
       position: absolute
@@ -220,7 +220,7 @@
   &-ball
     position: absolute
     z-index: 10
-    top: 15%
+    top: 12%
     right: 23%
     width: 32vw
     &:hover + .coin-ball-hover
@@ -240,11 +240,11 @@
       background: rgba(0,0,0,.8)
       transform: translate(-50%,1em)
       transition: all .15s ease-in-out
-      border: 0.2vw solid #fff
+      border: 0.1vw solid #fff
       &-title
         font-size: 2vw
         color: #fff
-        font-family: $sliderFont
+        font-family: $sliderBold
         font-weight: bold
         line-height: 3vh
       &-subtitle
@@ -252,7 +252,7 @@
         line-height: 2vh
         color: #B6B7B5
         padding-top: 2vh
-        font-family: $sliderFont
+        font-family: $sliderNormal
   &-hand
     position: absolute
     z-index: 11
@@ -284,7 +284,7 @@
     background: rgba(0,0,0,.8)
     transform: translate(-50%,1em)
     transition: all .15s ease-in-out
-    border: 0.2vw solid #fff
+    border: 0.1vw solid #fff
 
 .coin-chameleon
   position: absolute
@@ -308,4 +308,4 @@
     background: rgba(0,0,0,.8)
     transform: translate(-50%,1em)
     transition: all .15s ease-in-out
-    border: 0.2vw solid #fff
+    border: 0.1vw solid #fff
