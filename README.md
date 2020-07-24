@@ -34,7 +34,7 @@ How to use
 -
 Get started:
 
-    npm run start
+    npm run dev
 
 Get build:
  

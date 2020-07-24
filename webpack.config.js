@@ -10,37 +10,44 @@ module.exports = {
         path: path.resolve(__dirname, 'public'),
     },
     module: {
-        rules: [{
-            test: /\.css$/,
-            use: [MiniCssExtractPlugin.loader, 'css-loader']
-        },
+        rules: [
             {
-                test: /\.(jpg|png|svg)$/,
+                test: /\.css$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader']
+            },
+            {
+                test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options: {
-                    name: 'images/[name].[ext]'
+                    outputPath: 'images',
+                    name: '[path][name].[ext]',
                 },
             },
-        {
-            test: /\.sass$/,
-            use: [
-                'style-loader',
-                MiniCssExtractPlugin.loader,
-                {
-                    loader: 'css-loader',
-                    options: { sourceMap: true }
-                },
-                {
-                    loader: 'postcss-loader',
-                    options: { sourceMap: true, config: { path: './postcss.config.js' } }
-                },
-                {
-                    loader: 'sass-loader',
-                    options: { sourceMap: true }
-                }
-            ]
-        }]
-    },
+            {
+                test: /\.(ttf|otf)$/,
+                use: ['file-loader']
+            },
+            {
+                test: /\.sass$/,
+                use: [
+                    'style-loader',
+                    MiniCssExtractPlugin.loader,
+                    {
+                        loader: 'css-loader',
+                        options: { sourceMap: true }
+                    },
+                    {
+                        loader: 'postcss-loader',
+                        options: { sourceMap: true, config: { path: './postcss.config.js' } }
+                    },
+                    {
+                        loader: 'sass-loader',
+                        options: { sourceMap: true }
+                    }
+                    ]
+            }
+                ]
+            },
     devServer: {
         port: 3000
     },
