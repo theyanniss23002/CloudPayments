@@ -11,8 +11,8 @@ ScrollTrigger.create({
 });
 
 function startDialog() {
-  $('.universe').addClass('blur');
-  $('.dialog').show();
+  $('.universe').addClass('blur').fadeIn(1000);
+  $('.dialog').fadeIn(1000).delay(1000);
   $('.dialog__animal').fadeIn(500).delay(12000).fadeOut(500);
   setTimeout(function() {
     $('.dialog__cat').addClass('animate');
