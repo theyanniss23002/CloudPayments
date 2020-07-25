@@ -2,7 +2,7 @@
   "name": "CloudPayments",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "private": true,
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
     "build": "webpack --mode production",
