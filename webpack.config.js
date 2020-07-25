@@ -2,6 +2,7 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
 	mode: 'development',
@@ -12,10 +13,14 @@ module.exports = {
 	},
 	resolve: {
 		alias: {
-			'@images': path.resolve(__dirname, 'src/images'),//not working
-			'@': path.resolve(__dirname, 'src'),//not working
-			'@css': path.resolve(__dirname, 'src/css'),//not working
+			'images': path.resolve(__dirname, 'src/images'),
+			'fonts': path.resolve(__dirname, 'src/fonts'),
 		},
+	},
+	performance: {
+		hints: false,
+		maxEntrypointSize: 512000,
+		maxAssetSize: 512000
 	},
 	optimization: {
 		splitChunks: {
@@ -29,17 +34,24 @@ module.exports = {
 				use: [MiniCssExtractPlugin.loader, 'css-loader']
 			},
 			{
-				test: /\.(png|jpe?g|gif)$/i,
+				test: /\.html$/,
+				loader: 'html-loader',
+			},
+			{
+				test: /\.(png|jpe?g|svg)$/i,
 				loader: 'file-loader',
 				options: {
-					outputPath: 'public',
-					publicPath: 'images',
-					name: '@images/[path][name].[ext]',//not working
+					outputPath: 'images',
+					name: '[name].[ext]'
 				},
 			},
 			{
 				test: /\.(ttf|otf)$/,
-				use: ['file-loader']//not working
+				loader: 'file-loader',
+				options: {
+					outputPath: 'fonts',
+					name: '[name].[ext]'
+				}
 			},
 			{
 				test: /\.sass$/,
@@ -73,6 +85,14 @@ module.exports = {
 		new CleanWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			filename: '[name].[contenthash].css'
+		}),
+		new CopyWebpackPlugin({
+			patterns: [
+				{
+					from: path.resolve(__dirname, 'src/favicon.ico'),
+					to: path.resolve(__dirname, 'public')
+				}
+			]
 		})
 	],
 }

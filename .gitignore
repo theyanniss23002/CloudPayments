@@ -2,5 +2,3 @@
 /node_modules/
 /.git/
 package-lock.json
-.firebaserc
-firebase.json
