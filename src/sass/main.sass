@@ -8,6 +8,7 @@
 @import 'places/intro'
 @import 'places/universe'
 @import 'places/slider'
+@import 'places/fly'
 
 //slick imports
 @import 'utils/_slickfix'
@@ -26,10 +27,12 @@ body
   perspective: 1px
   transform-style: preserve-3d
   overflow-x: hidden
-  overflow-y: scroll
+  overflow-y: hidden
   height: inherit
   user-select: none
-
+  background-image: url('~images/Univese_Back.png')
+  background-repeat: no-repeat
+  background-size: cover
 section
   width: 100%
   min-height: 100vh

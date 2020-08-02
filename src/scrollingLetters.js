@@ -1,180 +1,27 @@
+import $ from 'jquery'
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+let vw = (coef) => window.innerWidth * (coef / 100);
 
-gsap.fromTo(".intro__wrap-word-1",
+function showCursor() {
+  $('.intro__wrap-cursor').css('opacity', '1');
+  setTimeout(function () {
+    $('body').css('overflow-y', 'scroll')
+  }, 500)
+}
+
+gsap.fromTo(".intro__wrap-word img",
     {
-      scale: 1,
+      opacity: 0,
+      z: vw(-2)
     },
     {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: -120,
-      y: -100,
-      duration: 1,
-      scale: 1,
-      rotate: -40
-    });
-
-gsap.fromTo(".intro__wrap-word-2",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: -90,
-      y: -130,
-      duration: 1,
-      scale: 1,
-    });
-
-gsap.fromTo(".intro__wrap-word-and",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: -60,
-      y: -50,
-      duration: 1,
-      scale: 1,
-      rotate: -20
-    });
-
-gsap.fromTo(".intro__wrap-word-3",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: -30,
-      y: -70,
-      duration: 1,
-      scale: 1,
-    });
-
-gsap.fromTo(".intro__wrap-word-4",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      y: -20,
-      duration: 1,
-      scale: 1,
-    });
-
-gsap.fromTo(".intro__wrap-word-5",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: 30,
-      y: -70,
-      duration: 1,
-      rotation: 20,
-      scale: 1,
-    });
-
-gsap.fromTo(".intro__wrap-word-6",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: 60,
-      y: 20,
-      duration: 1,
-      rotation: 20,
-      scale: 1,
-    });
-
-gsap.fromTo(".intro__wrap-word-7",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: 90,
-      y: -100,
-      duration: 1,
-      scale: 1,
-    });
-
-gsap.fromTo(".intro__wrap-word-8",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: 120,
-      duration: 1,
-      scale: 1,
-      rotation: 30,
-    });
-
-gsap.fromTo(".intro__wrap-word-9",
-    {
-      scale: 1,
-    },
-    {
-      scrollTrigger: {
-        trigger: ".intro",
-        toggleActions: "restart none reverse none",
-        start: "bottom bottom",
-        end: "1px top"
-      },
-      x: 150,
-      y: -100,
-      duration: 1,
-      rotation: 20,
-      scale: 1,
+      opacity: 1,
+      z: 0,
+      duration: 1.6,
+      onComplete: showCursor
     });
 
 gsap.to(".intro__wrap-cursor", {

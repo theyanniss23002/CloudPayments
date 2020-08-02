@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "acquiringcloudpayments"
+    "default": "acquiringcloudpayments",
+    "staging": "space-48e3b"
   }
 }
