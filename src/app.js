@@ -8,7 +8,6 @@ import './parallaxMouseMove'
 import './parallaxWithScroll'
 import './sliderConfiguration'
 import './verticalAdaptive'
-import './scrollMagic'
 
 //gsap imports
 import './scrollingLetters'
