@@ -1,6 +1,5 @@
 import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {TimelineMax, TweenMax, TweenLite} from "gsap/all";
 import $ from 'jquery'
 
 gsap.registerPlugin(ScrollTrigger);
@@ -21,27 +20,40 @@ ScrollTrigger.create({
 function startDialog() {
   $('.universe').addClass('blur').fadeIn(1000);
   $('.dialog').fadeIn(1000).delay(1000);
-  $('.dialog__animal').fadeIn(500).delay(12000).fadeOut(500);
-  setTimeout(function () {
-    $('.dialog__cat').addClass('animate');
-    $('.dialog__box_cat').fadeIn(500).delay(12000).fadeOut(500);
-  }, 4500);
-  setTimeout(function () {
-    $('.dialog__cat').removeClass('animate');
-  }, 3000);
-  setTimeout(function () {
-    $('.dialog__dog').addClass('animate');
-    $('.dialog__box_dog').fadeIn(500).delay(3000).fadeOut(500);
-  }, 100);
-  setTimeout(function () {
-    $('.dialog__dog').removeClass('animate');
-    $('.universe').removeClass('blur');
-    $('.dialog').hide()
-  }, 12000);
+  $('.dialog__animal').fadeIn(500);
+  setTimeout(dogSpeak, 1000)
+}
+function dogSpeak() {
+  $('.dialog__dog').addClass('animate');
+  $('.dialog__box_dog').fadeIn(500).delay(3000).fadeOut(500);
+  setTimeout(catSpeak, 5000)
+}
+function catSpeak() {
+  $('.dialog__dog').removeClass('animate');
+  $('.dialog__cat').addClass('animate');
+  $('.dialog__box_cat').fadeIn(500).delay(5000).fadeOut(500);
+  setTimeout(endDialog, 6000)
 }
 
+function endDialog() {
+  $('.dialog__cat').removeClass('animate');
+  $('.universe').removeClass('blur');
+  $('.dialog').hide()
+}
+
+$(document).mouseup(function (){
+  let div = $(".dialog");
+  if ($('.dialog__dog').hasClass('animate') ) {
+    $('.dialog__box_dog').hide();
+    setTimeout(catSpeak, 500)
+  } else if ( $('.dialog__cat').hasClass('animate') ) {
+    $('.dialog__box_cat').hide();
+    setTimeout(endDialog, 500)
+  }
+});
+
 function animalsBack() {
-  $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 500);
+  $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 700);
   $('body').css('overflow-y', 'hidden');
   gsap.fromTo('.goblin', {
     bottom: '-50%',
@@ -69,7 +81,7 @@ function animalsBack() {
     left: '3%',
     duration: 5,
     delay: 1
-  })
+  });
   gsap.fromTo('.donut', {
     bottom: 'auto',
     top: '52%',
@@ -78,7 +90,7 @@ function animalsBack() {
     left: '11%',
     duration: 5,
     delay: 1
-  })
+  });
   gsap.fromTo('.coin-wrap', {
     bottom: 'auto',
     top: '-160%',
@@ -92,11 +104,12 @@ function animalsBack() {
     bottom: 'auto',
     top: '-100%',
     left: '39%',
-    rotate: 0
+    rotate: 180
   }, {
     top: '3%',
     duration: 6,
-    delay: 1
+    delay: 0.3,
+    rotate: 0
   });
   gsap.to('.cat', {
     bottom: 'auto',
@@ -175,7 +188,7 @@ function animalsBack() {
   }, {
     right: '16%',
     duration: 4,
-    delay: 1
+    delay: 0.3
   });
   gsap.fromTo('.gold', {
     bottom: 'auto',
@@ -204,7 +217,7 @@ function animalsBack() {
     left: 'auto',
     right: '23%',
     rotate: 0,
-    width: '16%'
+    width: '16%',
   }, {
     top: '59%',
     duration: 5,
@@ -232,7 +245,7 @@ function animalsBack() {
   }, {
     right: '28%',
     duration: 4,
-    delay: 1
+    delay: 0.3
   });
   gsap.fromTo('.ship-wrap', {
     bottom: 'auto',

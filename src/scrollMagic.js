@@ -1,7 +1,6 @@
 import $ from 'jquery';
 import {gsap} from "gsap";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
-import {TimelineMax, TweenMax, TweenLite} from "gsap/all";
+import {TimelineMax} from "gsap/all";
 import ScrollMagic from 'scrollmagic';
 import "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
@@ -13,50 +12,10 @@ $(document).ready(function () {
 
   let timeline = new TimelineMax();
   timeline
-      .fromTo('.intro__wrap-word-1', 1, {
-        top: '32%'
+      .fromTo('h1', 1, {
+        y: 0
       }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-2', 1, {
-        top: '38%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-and', 1, {
-        top: '39%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-3', 1, {
-        top: '31%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-4', 1, {
-        top: '37%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-5', 1, {
-        top: '35.5%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-6, .intro__wrap-word-7', 1, {
-        top: '38%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-8', 1, {
-        top: '36.8%'
-      }, {
-        top: '-=200%'
-      }, '-=1')
-      .fromTo('.intro__wrap-word-9', 1, {
-        top: '34%'
-      }, {
-        top: '-=200%'
+        y: vh(-200)
       }, '-=1')
       .fromTo('.img__top-middle', 1, {
         top: vh(88)

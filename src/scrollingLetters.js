@@ -9,10 +9,10 @@ function showCursor() {
   $('.intro__wrap-cursor').css('opacity', '1');
   setTimeout(function () {
     $('body').css('overflow-y', 'scroll')
-  }, 500)
+  }, 600)
 }
 
-gsap.fromTo(".intro__wrap-word img",
+gsap.fromTo(".intro__wrap-word h1",
     {
       opacity: 0,
       z: vw(-2)

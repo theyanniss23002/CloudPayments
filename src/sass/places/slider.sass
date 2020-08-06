@@ -1,64 +1,20 @@
-.carousel-case
-  background: transparent
-  display: none
-
 .slider
-  position: relative
+  display: none
+  position: fixed
+  top: 0
+  left: 0
   height: 100vh
-  display: flex
+  width: 100vw
   flex-direction: column
   justify-content: flex-end
-  &__box
-    position: absolute
-    bottom: 2%
-    right: 2%
-    z-index: 20
-    &-prev
-      width: 8vw
-      height: 7vh
-      background: #06223B
-      border: 0
-      cursor: pointer
-      background: linear-gradient(45deg, transparent 1vw, #06223B 0) bottom left
-      transition: .2s
-      &::before
-        content: ''
-        display: block
-        margin: 0 auto
-        width: 1vw
-        background-size: 1vw
-        height: 1.7vw
-        background-repeat: no-repeat
-        background-image: url('~images/arrow-left.svg')
-      &:hover
-        background: linear-gradient(45deg, transparent 1vw, #F7DF14 0) bottom left
-        transition: .3s
-    &-next
-      width: 8vw
-      height: 7vh
-      background: #06223B
-      border: 0
-      cursor: pointer
-      background: linear-gradient(-45deg, transparent 1vw, #06223B 0) top right
-      transition: .2s
-      &::before
-        content: ''
-        display: block
-        margin: 0 auto
-        width: 1vw
-        background-size: 1vw
-        height: 1.7vw
-        background-repeat: no-repeat
-        background-image: url('~images/arrow-right.svg')
-      &:hover
-        background: linear-gradient(-45deg, transparent 1vw, #F7DF14 0) top right
-        transition: .3s
-
+  &.active
+    display: flex
 .slideshow
   &__img
     width: 100vw
     height: 88vh
   &__card
+    display: none
     position: relative
     &-desc
       position: relative
