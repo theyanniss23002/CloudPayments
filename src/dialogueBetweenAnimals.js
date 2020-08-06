@@ -13,7 +13,7 @@ ScrollTrigger.create({
 
 ScrollTrigger.create({
   trigger: '.universe',
-  start: 'top center',
+  start: 'top 70%',
   onEnter: () => animalsBack(),
 });
 
@@ -53,7 +53,7 @@ $(document).mouseup(function (){
 });
 
 function animalsBack() {
-  $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 700);
+  $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 2000);
   $('body').css('overflow-y', 'hidden');
   gsap.fromTo('.goblin', {
     bottom: '-50%',
@@ -244,8 +244,8 @@ function animalsBack() {
     top: '29%',
   }, {
     right: '28%',
-    duration: 4,
-    delay: 0.3
+    duration: 3,
+    delay: 1
   });
   gsap.fromTo('.ship-wrap', {
     bottom: 'auto',

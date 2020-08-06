@@ -366,14 +366,21 @@
 		justify-content: flex-start
 		span
 			display: block
-			margin-right: 0.2vw
+			margin-right: 0.3vw
+			border: none
+			padding: 0
+			box-sizing: border-box
 			width: 0.5vw
 			height: 0.5vw
 			background-color: #fff
 			border-radius: 50%
+			overflow: hidden
 			animation-name: load
 			animation-duration: 2s
 			animation-iteration-count: infinite
+			@media screen and (max-width: 1199px)
+				width: 0.7vw
+				height: 0.7vw
 			&:nth-child(2)
 				animation-delay: 0.5s
 			&:nth-child(3)
@@ -410,6 +417,8 @@
 		align-items: flex-end
 		font-size: 1.2vw
 		line-height: 1.2
+		@media screen and (max-width: 1199px)
+			font-size: 1.4vw
 		&_dog
 			background-image: url('~images/character/chat-box-dog.svg')
 			top: -3vw

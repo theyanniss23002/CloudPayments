@@ -1,6 +1,14 @@
 import $ from 'jquery'
 
 $(document).ready(function () {
+  let width = window.innerWidth;
+  if (width >= 1200) {
+    // Fakes the loading setting a timeout
+    setTimeout(function() {
+      $('body').addClass('loaded');
+    }, 1000);
+  }
+
   $(".coin-wrap, .boom-wrap, .trash-wrap, .cube-wrap").on('click', function () {
     let data = $(this).data('class');
     $('body').css('perspective', 'none');
