@@ -22,7 +22,7 @@ if (width >= 1200) {
         opacity: 1,
         z: 0,
         duration: 1.5,
-        delay: 1,
+        delay: 10,
         onComplete: showCursor
       });
 

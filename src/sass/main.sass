@@ -10,11 +10,6 @@
 @import 'places/slider'
 @import 'places/fly'
 
-////slick imports
-//@import 'utils/_slickfix'
-//@import '~slick-carousel/slick/slick'
-//@import '~slick-carousel/slick/slick-theme'
-
 html
   height: 100%
   overflow: hidden
@@ -52,7 +47,7 @@ ul, li, p
   outline: none
   outline-offset: unset
 h1
-  font-family: Helvetica
+  font-family: $regularFont
   font-size: 10vw
   color: #82BDEB
   letter-spacing: -0.5vw
@@ -85,7 +80,7 @@ h1
   margin: -75px 0 0 -75px
   border-radius: 50%
   border: 3px solid transparent
-  border-top-color: #16a085
+  border-top-color: #82BDEB
   animation: spin 1.7s linear infinite
   z-index: 11
   &:before
@@ -97,7 +92,7 @@ h1
     bottom: 5px
     border-radius: 50%
     border: 3px solid transparent
-    border-top-color: #e74c3c
+    border-top-color: #F36000
     animation: spin-reverse .6s linear infinite
   &:after
     content: ""
@@ -108,7 +103,7 @@ h1
     bottom: 15px
     border-radius: 50%
     border: 3px solid transparent
-    border-top-color: #f9c922
+    border-top-color: #FEEA37
     animation: spin 1s linear infinite
 
 // Bourbon mixins
@@ -129,7 +124,7 @@ h1
   top: 0
   width: 51%
   height: 100%
-  background: #222
+  background: #091627
   z-index: 10
 
 #loader-wrapper .loader-section.section-left
