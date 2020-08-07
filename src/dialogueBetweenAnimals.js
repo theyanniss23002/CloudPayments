@@ -2,6 +2,10 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import $ from 'jquery'
 
+setTimeout(function() {
+  $('body').addClass('loaded');
+}, 1000);
+
 gsap.registerPlugin(ScrollTrigger);
 
 ScrollTrigger.create({
