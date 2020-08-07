@@ -20,7 +20,7 @@ ScrollTrigger.create({
 function startDialog() {
   $('.universe').addClass('blur').fadeIn(1000);
   $('.dialog').fadeIn(1000).delay(1000);
-  $('.dialog__animal').fadeIn(500);
+  $('.dialog__animal').fadeIn(1000);
   setTimeout(dogSpeak, 1000)
 }
 function dogSpeak() {
@@ -125,6 +125,17 @@ function animalsBack() {
     rotate: 0
   });
   $('.dog').hide();
+  gsap.fromTo('.star', {
+    bottom: 'auto',
+    left: 'auto',
+    top: '32%',
+    right: '-70%',
+    rotate: 0
+  }, {
+    right: '15%',
+    duration: 4,
+    delay: 0.3
+  });
   gsap.fromTo('.boom-wrap', {
     bottom: 'auto',
     left: 'auto',
@@ -178,17 +189,6 @@ function animalsBack() {
     right: '2%',
     duration: 5,
     delay: 1
-  });
-  gsap.fromTo('.star', {
-    bottom: 'auto',
-    left: 'auto',
-    top: '32%',
-    right: '-70%',
-    rotate: 0
-  }, {
-    right: '16%',
-    duration: 4,
-    delay: 0.3
   });
   gsap.fromTo('.gold', {
     bottom: 'auto',

@@ -1,5 +1,5 @@
 .universe
-	transition: all 0.3s ease
+	transition: all 1s ease
 	background-image: url('~images/White_Stars.png')
 	&__wrap
 		position: relative
@@ -16,7 +16,7 @@
 				img
 					height: auto
 				.popup
-					display: block
+					opacity: 1
 	&__click
 		background-image: url('~images/ellipse.png')
 		background-repeat: no-repeat
@@ -29,7 +29,7 @@
 		height: 20%
 		display: flex
 		align-items: flex-end
-		line-height: 8vh
+		line-height: 2
 		z-index: -1
 		justify-content: center
 		background-position: center
@@ -129,7 +129,7 @@
 			flex-direction: column
 			position: absolute
 			left: 50%
-			top: 110%
+			top: 105%
 			width: 100%
 			max-width: 20vw
 			opacity: 0
@@ -198,8 +198,7 @@
 			position: absolute
 			left: 50%
 			bottom: 110%
-			width: 100%
-			max-width: 23vw
+			width: 20vw
 			opacity: 0
 			padding: 1vw
 			background: rgba(0,0,0,.8)
@@ -334,7 +333,10 @@
 	width: 5vw
 
 .popup
-	display: none
+	opacity: 0
+	transition: all .15s ease-in-out
+	@media screen and (max-width: 1199px)
+		display: none !important
 	&-title
 		font-size: 2vw
 		color: #fff
@@ -343,7 +345,7 @@
 		line-height: 1.2
 	&-subtitle
 		font-size: 1vw
-		line-height: 2vh
+		line-height: 1.2
 		color: #B6B7B5
 		padding-top: 2vh
 		font-family: $sliderNormal
@@ -427,7 +429,7 @@
 			width: 24vw
 			height: 10.5vw
 			padding: 2vh 2vw 3vh 2vw
-			font-family: $sliderNormal
+			font-family: StolzlRegular
 		&_cat
 			background-image: url('~images/character/chat-box-cat.svg')
 			background-position: left bottom
@@ -437,7 +439,7 @@
 			height: 100vh
 			max-height: 23vh
 			padding: 2vh 2vw 3vh 3.5vw
-			font-family: $sliderNormal
+			font-family: StolzlRegular
 @keyframes dialog
 	0%
 		transform: translateY(0)
