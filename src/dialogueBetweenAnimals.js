@@ -3,19 +3,22 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 import $ from 'jquery'
 
 gsap.registerPlugin(ScrollTrigger);
+let width = window.innerWidth;
+$(document).ready(function () {
+  ScrollTrigger.create({
+    once: true,
+    trigger: '.universe',
+    start: 'top 15%',
+    onEnter: () => (width >= 1200) ? startDialog() : setTimeout(startDialog, 2000),
+  });
 
-ScrollTrigger.create({
-  trigger: '.universe',
-  start: 'top 15%',
-  onEnter: () => startDialog(),
-  once: true
+  ScrollTrigger.create({
+    trigger: '.universe',
+    start: 'top 70%',
+    onEnter: () => (width >= 1200) ? animalsBack() : setTimeout(animalsBack, 2000)
+  });
 });
 
-ScrollTrigger.create({
-  trigger: '.universe',
-  start: 'top 70%',
-  onEnter: () => animalsBack(),
-});
 
 function startDialog() {
   $('.universe').addClass('blur').fadeIn(1000);
@@ -42,7 +45,6 @@ function endDialog() {
 }
 
 $(document).mouseup(function (){
-  let div = $(".dialog");
   if ($('.dialog__dog').hasClass('animate') ) {
     $('.dialog__box_dog').hide();
     setTimeout(catSpeak, 500)
@@ -56,10 +58,12 @@ function animalsBack() {
   $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 2000);
   $('body').css('overflow-y', 'hidden');
   gsap.fromTo('.goblin', {
-    bottom: '-50%',
-    left: '45%'
+    top: '150%',
+    left: '45%',
+    bottom: 'unset',
+    right: 'unset'
   }, {
-    bottom: '10%',
+    top: '70%',
     duration: 5,
     delay: 1
   });
@@ -96,8 +100,8 @@ function animalsBack() {
     top: '-160%',
     left: '5%'
   }, {
-    top: '2%',
-    duration: 7,
+    top: '1%',
+    duration: 6,
     delay: 1
   });
   gsap.fromTo('.octopus', {
@@ -125,111 +129,110 @@ function animalsBack() {
     rotate: 0
   });
   $('.dog').hide();
-  gsap.fromTo('.star', {
-    bottom: 'auto',
-    left: 'auto',
-    top: '32%',
-    right: '-70%',
-    rotate: 0
-  }, {
-    right: '15%',
-    duration: 4,
-    delay: 0.3
-  });
   gsap.fromTo('.boom-wrap', {
-    bottom: 'auto',
-    left: 'auto',
-    top: '-200%',
-    right: '22%'
+    left: '61%',
+    top: '-150%',
+    right: 'auto',
+    bottom: 'auto'
   }, {
     top: '1%',
     duration: 7,
     delay: 1
   });
   gsap.fromTo('.twister', {
-    bottom: 'auto',
-    left: 'auto',
     top: '-100%',
-    right: '-100%'
+    left: '150%',
+    bottom: 'auto',
+    right: 'auto'
   }, {
     top: '4%',
-    right: '8%',
+    left: '82%',
     duration: 5,
     delay: 1
   });
   gsap.fromTo('.eye', {
-    bottom: 'auto',
-    left: 'auto',
+    left: '150%',
     top: '-100%',
-    right: '-100%',
+    right: 'auto',
+    bottom: 'auto',
     rotate: 0
   }, {
     top: '2%',
-    right: '0%',
+    left: '93%',
     duration: 5,
-    delay: 3
+    delay: 2
   });
   gsap.fromTo('.jaws', {
-    bottom: 'auto',
-    left: 'auto',
+    left: '150%',
     top: '20%',
-    right: '-100%'
+    right: 'auto',
+    bottom: 'auto'
   }, {
-    right: '0%',
+    left: '85%',
     duration: 5,
     delay: 1
   });
   gsap.fromTo('.ufo', {
-    bottom: 'auto',
-    left: 'auto',
     top: '45%',
-    right: '-100%',
+    left: '150%',
+    right: 'auto',
+    bottom: 'auto',
     rotate: 0
   }, {
-    right: '2%',
+    left: '87%',
     duration: 5,
     delay: 1
   });
-  gsap.fromTo('.gold', {
+  gsap.fromTo('.star', {
+    left: '150%',
+    top: '25%',
+    right: 'auto',
     bottom: 'auto',
-    left: 'auto',
-    top: '69%',
-    right: '-100%'
-  }, {
-    right: '10%',
-    duration: 5,
-    delay: 2
-  });
-  gsap.fromTo('.worm', {
-    bottom: 'auto',
-    left: 'auto',
-    top: '40%',
-    right: '-70%',
     rotate: 0
   }, {
-    right: '11%',
+    left: '78%',
+    duration: 4,
+  });
+  gsap.fromTo('.gold', {
+    left: '120%',
+    top: '72%',
+    right: 'auto',
+    bottom: 'auto'
+  }, {
+    left: '84%',
+    duration: 5,
+    delay: 1
+  });
+  gsap.fromTo('.worm', {
+    left: '140%',
+    top: '59%',
+    right: 'auto',
+    bottom: 'auto',
+    rotate: 0
+  }, {
+    left: '84%',
     duration: 4,
     delay: 1
   });
   gsap.fromTo('.trash-wrap', {
-    bottom: 'auto',
     top: '200%',
-    left: 'auto',
-    right: '23%',
+    left: '61%',
+    right: 'auto',
+    bottom: 'auto',
     rotate: 0,
     width: '16%',
   }, {
-    top: '59%',
+    top: '60%',
     duration: 5,
     delay: 1
   });
   $('.trash').css('width', '16vw');
   gsap.fromTo('.sun', {
-    bottom: 'auto',
     top: '25%',
-    left: 'auto',
-    right: '41%',
+    left: '38%',
     opacity: 0,
+    right: 'auto',
+    bottom: 'auto',
     scale: 0.1
   }, {
     opacity: 1,
@@ -238,12 +241,12 @@ function animalsBack() {
     delay: 1
   });
   gsap.fromTo('.rocket-wrap', {
-    bottom: 'auto',
-    left: 'auto',
+    left: '130%',
     right: '-100%',
-    top: '29%',
+    top: '32%',
+    bottom: 'auto',
   }, {
-    right: '28%',
+    left: '60%',
     duration: 3,
     delay: 1
   });
@@ -252,7 +255,7 @@ function animalsBack() {
     left: '-100%',
     top: '42%',
   }, {
-    left: '15%',
+    left: '17%',
     duration: 4,
     delay: 1
   });
@@ -263,7 +266,7 @@ function animalsBack() {
   }, {
     left: '1%',
     duration: 6,
-    delay: 3
+    delay: 2
   });
   gsap.fromTo('.cube-wrap', {
     bottom: 'auto',
