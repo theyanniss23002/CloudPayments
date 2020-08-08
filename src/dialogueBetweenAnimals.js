@@ -2,6 +2,29 @@ import {gsap} from "gsap";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import $ from 'jquery'
 
+
+$(document).ready(function () {
+  // Fakes the loading setting a timeout
+  setTimeout(function() {
+    $('body').addClass('loaded');
+  }, 1000);
+
+  $(".coin-wrap, .boom-wrap, .trash-wrap, .cube-wrap").on('click', function () {
+    let data = $(this).data('class');
+    $('body').css('perspective', 'none');
+    $('.character-cell').fadeOut(500);
+    $(".slider").addClass('active');
+    $(`.${data}`).fadeIn(500);
+  });
+  $(".slide-close").on('click', function () {
+    $('body').css('perspective', '1px');
+    $(".slider").removeClass('active');
+    $('.slideshow__card').fadeOut(500);
+    $('.character-cell').fadeIn(500)
+  });
+});
+
+
 gsap.registerPlugin(ScrollTrigger);
 let width = window.innerWidth;
 $(document).ready(function () {
@@ -9,13 +32,13 @@ $(document).ready(function () {
     once: true,
     trigger: '.universe',
     start: 'top 15%',
-    onEnter: () => (width >= 1200) ? startDialog() : setTimeout(startDialog, 2000),
+    onEnter: () => startDialog()
   });
 
   ScrollTrigger.create({
     trigger: '.universe',
     start: 'top 70%',
-    onEnter: () => (width >= 1200) ? animalsBack() : setTimeout(animalsBack, 2000)
+    onEnter: () => animalsBack()
   });
 });
 

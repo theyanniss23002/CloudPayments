@@ -4,7 +4,6 @@ import './sass/main.sass'
 import 'animate.css/animate.min.css'
 
 //function's imports
-import './sliderConfiguration'
 import './verticalAdaptive'
 import './scrollMagic'
 
