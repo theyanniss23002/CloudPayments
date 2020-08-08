@@ -2,6 +2,8 @@
 	transition: all 1s ease
 	background-image: url('~images/White_Stars.png')
 	background-size: contain
+	@media screen and (max-width: 1199px)
+		overflow: hidden
 	&__wrap
 		position: relative
 	&__character
@@ -11,6 +13,8 @@
 		margin: auto
 		width: 100%
 		height: 100vh
+		@media screen and (max-width: 1199px)
+			height: calc(var(--vh, 1vh) * 100)
 		&-img
 			position: absolute
 			&.animate__animated:hover
