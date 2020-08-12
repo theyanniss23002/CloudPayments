@@ -352,7 +352,6 @@
 .blur
 	filter: blur(7px)
 .dialog
-	display: none
 	position: absolute
 	z-index: 4
 	top: 0
@@ -387,12 +386,13 @@
 			&:nth-child(3)
 				animation-delay: 1s
 	&__animal
-		display: none
+		//display: none
 		position: absolute
-		z-index: 6
+		z-index: -6
+		opacity: 0
 		bottom: 5vh
 		height: auto
-		transition: transform 0.3s ease
+		transition: all 1.3s ease
 		&.animate
 			animation-name: dialog
 			animation-duration: 4s

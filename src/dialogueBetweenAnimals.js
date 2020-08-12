@@ -45,8 +45,10 @@ $(document).ready(function () {
 
 function startDialog() {
   $('.universe').addClass('blur').fadeIn(1000);
-  $('.dialog').fadeIn(1000).delay(1000);
-  $('.dialog__animal').fadeIn(1000);
+  $('.dialog__animal').css({
+    'opacity': 1,
+    'z-index': 6
+  });
   setTimeout(dogSpeak, 1000)
 }
 function dogSpeak() {
