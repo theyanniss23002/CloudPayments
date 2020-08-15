@@ -9,11 +9,18 @@ $(document).ready(function () {
     $('body').addClass('loaded');
   }, 1000);
 
-  $(".coin-wrap, .boom-wrap, .trash-wrap, .cube-wrap").on('click', function () {
+  $(".boom-wrap, .trash-wrap, .cube-wrap").on('click', function () {
     let data = $(this).data('class');
     $('body').css('perspective', 'none');
     $('.character-cell').fadeOut(500);
     $(".slider").addClass('active');
+    $(`.${data}`).fadeIn(500);
+  });
+  $(".coin-wrap").on('click', function () {
+    let data = $(this).data('class');
+    $('body').css('perspective', 'none');
+    $('.character-cell').fadeOut(500);
+    $(".slider").addClass('active-full');
     $(`.${data}`).fadeIn(500);
   });
   $(".slide-close").on('click', function () {

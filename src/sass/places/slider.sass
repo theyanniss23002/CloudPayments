@@ -10,6 +10,24 @@
   backdrop-filter: blur(5px)
   &.active
     display: flex
+    width: 100%
+    border-radius: 3px
+    margin: auto
+    padding: 20vw
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: fit-content
+  &.active-full
+    display: flex
+    width: 100%
+    border-radius: 3px
+    margin: auto
+    padding: 20vw
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    height: fit-content
 .slideshow
   &__img
     width: 100%
@@ -84,10 +102,10 @@
   position: relative
   &-ring
     position: absolute
-    top: 12%
+    top: 16%
     left: 0
-    width: 97vw
-    height: 31.3vh
+    width: 55vw
+    height: 27.3vh
     &:hover + .coin-ring-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -108,9 +126,9 @@
       border: 0.1vw solid #fff
   &-shuttle
     position: absolute
-    width: 21vw
+    width: 13vw
     left: 17%
-    top: 12%
+    top: 16%
     &:hover + .coin-shuttle-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -134,54 +152,54 @@
       position: absolute
       bottom: 7%
       left: 11%
-      width: 7vw
+      width: 4vw
     &-3
       position: absolute
       bottom: 13%
       left: 24%
-      width: 7vw
+      width: 4vw
     &-4
       position: absolute
       bottom: 6%
       left: 34%
-      width: 7vw
+      width: 4vw
   &-chameleon
     &-1
       position: absolute
       bottom: 5%
       left: 50%
-      width: 7vw
+      width: 4vw
     &-3
       position: absolute
       bottom: 24%
       right: 29%
-      width: 9vw
+      width: 5vw
     &-4
       position: absolute
       bottom: 17%
       right: 21%
-      width: 9vw
+      width: 5vw
     &-5
       position: absolute
       bottom: 2%
       right: 26%
-      width: 7vw
+      width: 4vw
     &-6
       position: absolute
       bottom: 20%
       right: 8%
-      width: 11vw
+      width: 6vw
     &-7
       position: absolute
       bottom: 1%
       right: 12%
-      width: 8vw
+      width: 5vw
   &-ball
     position: absolute
     z-index: 10
-    top: 12%
+    top: 18%
     right: 23%
-    width: 32vw
+    width: 17vw
     &:hover + .coin-ball-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -226,7 +244,7 @@
   position: absolute
   bottom: 1%
   left: 19%
-  width: 7vw
+  width: 4vw
   z-index: 50
   &:hover + .coin-mobile-hover
     opacity: 1
@@ -251,7 +269,7 @@
   position: absolute
   bottom: 10%
   left: 58%
-  width: 9vw
+  width: 4vw
   &:hover + .coin-chameleon-hover
     opacity: 1
     transform: translate(-50%, 0)
