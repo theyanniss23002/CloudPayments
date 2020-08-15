@@ -10,3 +10,4 @@ import './scrollMagic'
 //gsap imports
 import './scrollingLetters'
 import './dialogueBetweenAnimals'
+import './modalWindow'
