@@ -32,6 +32,10 @@ body
 section
   width: 100%
   min-height: 100vh
+  transition: all 0.6s ease
+  transform-origin: center center
+  @media screen and (max-width: 1199px)
+    min-height: calc(var(--vh, 1vh) * 100) !important
 
 *, *:before, *:after
   box-sizing: border-box
