@@ -5,7 +5,7 @@ import $ from 'jquery'
 
 $(document).ready(function () {
   // Fakes the loading setting a timeout
-  setTimeout(function() {
+  setTimeout(function () {
     $('body').addClass('loaded');
   }, 1000);
 
@@ -33,7 +33,6 @@ $(document).ready(function () {
 
 
 gsap.registerPlugin(ScrollTrigger);
-let width = window.innerWidth;
 $(document).ready(function () {
   ScrollTrigger.create({
     once: true,
@@ -43,6 +42,7 @@ $(document).ready(function () {
   });
 
   ScrollTrigger.create({
+    once: true,
     trigger: '.universe',
     start: 'top 70%',
     onEnter: () => animalsBack()
@@ -51,6 +51,10 @@ $(document).ready(function () {
 
 
 function startDialog() {
+  $('body, html').css({
+    'overflow': 'hidden',
+    'height': '100vh'
+  });
   $('.universe').addClass('blur').fadeIn(1000);
   $('.dialog__animal').css({
     'opacity': 1,
@@ -58,11 +62,13 @@ function startDialog() {
   });
   setTimeout(dogSpeak, 1000)
 }
+
 function dogSpeak() {
   $('.dialog__dog').addClass('animate');
   $('.dialog__box_dog').fadeIn(500).delay(3000).fadeOut(500);
   setTimeout(catSpeak, 5000)
 }
+
 function catSpeak() {
   $('.dialog__dog').removeClass('animate');
   $('.dialog__cat').addClass('animate');
@@ -76,19 +82,19 @@ function endDialog() {
   $('.dialog').hide()
 }
 
-$(document).mouseup(function (){
-  if ($('.dialog__dog').hasClass('animate') ) {
+$(document).mouseup(function () {
+  if ($('.dialog__dog').hasClass('animate')) {
     $('.dialog__box_dog').hide();
     setTimeout(catSpeak, 500)
-  } else if ( $('.dialog__cat').hasClass('animate') ) {
+  } else if ($('.dialog__cat').hasClass('animate')) {
     $('.dialog__box_cat').hide();
     setTimeout(endDialog, 500)
   }
 });
 
 function animalsBack() {
+  let width = window.innerWidth;
   $('html, body').animate({scrollTop: $(document).height() - $(window).height()}, 2000);
-  $('body').css('overflow-y', 'hidden');
   gsap.fromTo('.goblin', {
     top: '150%',
     left: '45%',
