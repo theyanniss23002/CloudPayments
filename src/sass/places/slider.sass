@@ -28,6 +28,7 @@
     align-items: center
     justify-content: center
     height: fit-content
+    overflow-y: scroll
 .slideshow
   &__img
     width: 100%
@@ -102,10 +103,10 @@
   position: relative
   &-ring
     position: absolute
-    top: 16%
+    top: 20.5%
     left: 0
     width: 55vw
-    height: 27.3vh
+    height: 21.3vh
     &:hover + .coin-ring-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -288,3 +289,10 @@
     transform: translate(-50%,1em)
     transition: all .15s ease-in-out
     border: 0.1vw solid #fff
+
+@media (max-width: 700px)
+  .slider
+    &.active-full
+      height: auto
+    &.active
+      height: auto
