@@ -4,13 +4,17 @@ import {TimelineMax} from "gsap/all";
 import ScrollMagic from 'scrollmagic';
 import "scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap";
 import 'scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators';
+
 let width = window.innerWidth;
 let vh = (coef) => window.innerHeight * (coef / 100);
 
 $(document).ready(function () {
+  goScroll()
+});
+
+function goScroll() {
   if (width >= 1200) {
     let controller = new ScrollMagic.Controller();
-
     let timeline = new TimelineMax();
     timeline
         .fromTo('h1', 1, {
@@ -55,97 +59,97 @@ $(document).ready(function () {
         }, '-=1')
         .fromTo('.fly', 1, {
           top: '0%'
-        },{
+        }, {
           top: vh(5)
         }, '-=1')
         .fromTo('.fly__star_first_big', 1, {
           top: vh(100)
-        },{
+        }, {
           top: '-=7%'
         }, '-=1')
         .fromTo('.fly__star_first_small-2', 1, {
           top: vh(102)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_first_small-3', 1, {
           top: vh(100)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_second_small-3', 1, {
           top: vh(200)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_second_big', 1, {
           top: vh(210)
-        },{
+        }, {
           top: '-=8%'
         }, '-=1')
         .fromTo('.fly__star_second_small-2', 1, {
           top: vh(250)
-        },{
+        }, {
           top: '-=3%'
         }, '-=1')
         .fromTo('.fly__star_third_small-3', 1, {
           top: vh(290)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_third_big', 1, {
           top: vh(320)
-        },{
+        }, {
           top: '-=7%'
         }, '-=1')
         .fromTo('.fly__star_fourth_small-3', 1, {
           top: vh(400)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_fourth_small-2', 1, {
           top: vh(430)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_fourth_big', 1, {
           top: vh(455)
-        },{
+        }, {
           top: '-=7%'
         }, '-=1')
         .fromTo('.fly__star_fourth_small', 1, {
           top: vh(440)
-        },{
+        }, {
           top: '-=5%'
         }, '-=1')
         .fromTo('.fly__star_fith_small', 1, {
           top: vh(510)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_fith_small-2', 1, {
           top: vh(550)
-        },{
+        }, {
           top: '-=4%'
         }, '-=1')
         .fromTo('.fly__star_sixth_small-1', 1, {
           top: vh(630)
-        },{
+        }, {
           top: '-=3%'
         }, '-=1')
         .fromTo('.fly__star_sixth_small-3', 1, {
           top: vh(620)
-        },{
+        }, {
           top: '-=3%'
         }, '-=1')
         .fromTo('.fly__star_sixth_small', 1, {
           top: vh(750)
-        },{
+        }, {
           top: '-=20%'
         }, '-=1')
         .fromTo('.fly__star_seventh_small', 1, {
           top: vh(800)
-        },{
+        }, {
           top: '-=20%',
         }, '-=1')
     let scene = new ScrollMagic.Scene({
@@ -372,4 +376,4 @@ $(document).ready(function () {
       bottom: '+=25%',
     })
   }
-});
+}
