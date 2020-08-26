@@ -16,6 +16,15 @@ function goScroll() {
   if (width >= 1200) {
     let controller = new ScrollMagic.Controller();
     let timeline = new TimelineMax();
+    new ScrollMagic.Scene({
+      triggerElement: '#intro',
+      triggerHook: 0,
+      duration: '700%',
+
+    })
+        .setTween(timeline)
+        .setPin('#intro')
+        .addTo(controller);
     timeline
         .fromTo('h1', {
           duration: 1,
@@ -161,14 +170,6 @@ function goScroll() {
         }, {
           top: '-=20%',
         }, '-=1');
-    new ScrollMagic.Scene({
-      triggerElement: '#intro',
-      triggerHook: 0,
-      duration: '700%'
-    })
-        .setTween(timeline)
-        .setPin('#intro')
-        .addTo(controller);
     gsap.to('.jaws', {
       scrollTrigger: {
         trigger: '.jaws',
