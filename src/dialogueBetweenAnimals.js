@@ -12,6 +12,7 @@ $(document).ready(function () {
   $(".boom-wrap, .trash-wrap, .cube-wrap").on('click', function () {
     let data = $(this).data('class');
     $('body').css('perspective', 'none');
+    $('body').css('transform', 'none');
     $('.character-cell').fadeOut(500);
     $(".slider").addClass('active');
     $(`.${data}`).fadeIn(500);
