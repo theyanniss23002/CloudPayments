@@ -4,8 +4,11 @@ import $ from 'jquery'
 window.addEventListener("orientationchange", checkOrientation);
 window.addEventListener("resize", reload, false);
 document.addEventListener("DOMContentLoaded", checkOrientation);
+
 function reload() {
-  location.reload()
+  if (width >= 1200) {
+    location.reload()
+  }
 }
 
 function checkOrientation() {

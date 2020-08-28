@@ -11,21 +11,29 @@ $(document).ready(function () {
 
   $(".boom-wrap, .trash-wrap, .cube-wrap").on('click', function () {
     let data = $(this).data('class');
-    $('body').css('perspective', 'none');
-    $('body').css('transform', 'none');
+    $('body').css({
+      'perspective': 'none',
+      'transform': 'none'
+    });
     $('.character-cell').fadeOut(500);
     $(".slider").addClass('active');
     $(`.${data}`).fadeIn(500);
   });
   $(".coin-wrap").on('click', function () {
     let data = $(this).data('class');
-    $('body').css('perspective', 'none');
+    $('body').css({
+      'perspective': 'none',
+      'transform': 'none'
+    });
     $('.character-cell').fadeOut(500);
     $(".slider").addClass('active-full');
     $(`.${data}`).fadeIn(500);
   });
   $(".slide-close").on('click', function () {
-    $('body').css('perspective', '1px');
+    $('body').css({
+      'perspective': '1px',
+      'transform': 'translate3D(0,0,0)'
+    });
     $(".slider").removeClass('active');
     $('.slideshow__card').fadeOut(500);
     $('.character-cell').fadeIn(500)
@@ -56,6 +64,7 @@ function startDialog() {
     'overflow': 'hidden',
     'height': '100vh'
   });
+  $('.intro').hide();
   $('.universe').addClass('blur').fadeIn(1000);
   $('.dialog__animal').css({
     'opacity': 1,
