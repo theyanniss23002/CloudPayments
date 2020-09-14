@@ -13,7 +13,8 @@ $(document).ready(function () {
     let data = $(this).data('class');
     $('body').css({
       'perspective': 'none',
-      'transform': 'none'
+      'transform': 'none',
+      '-moz-transform': 'none'
     });
     $('.character-cell').fadeOut(500);
     $(".slider").addClass('active');
@@ -37,6 +38,20 @@ $(document).ready(function () {
     $(".slider").removeClass('active');
     $('.slideshow__card').fadeOut(500);
     $('.character-cell').fadeIn(500)
+  });
+
+  $('div.slider').mouseup(function (e) { // событие клика по веб-документу
+    let div = $(".slideshow__card"); // тут указываем элемент
+    if (!div.is(e.target) // если клик был не по нашему блоку
+        && div.has(e.target).length === 0) { // и не по его дочерним элементам
+      $('body').css({
+        'perspective': '1px',
+        'transform': 'translate3D(0,0,0)'
+      });
+      $(".slider").removeClass('active');
+      $('.slideshow__card').fadeOut(500);
+      $('.character-cell').fadeIn(500)
+    }
   });
 });
 

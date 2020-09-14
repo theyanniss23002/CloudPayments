@@ -5,6 +5,11 @@ window.addEventListener("orientationchange", checkOrientation);
 window.addEventListener("resize", reload, false);
 document.addEventListener("DOMContentLoaded", checkOrientation);
 
+let body = document.querySelector('body');
+let gap = body.offsetWidth - body.clientWidth;
+body.style.overflowY = "hidden";
+body.style.width = "calc(100% - " + gap + "px )";
+
 function reload() {
   if (width >= 1200) {
     location.reload()
@@ -20,3 +25,4 @@ function checkOrientation() {
     document.querySelector('.universe').style.display = "block";
   }
 }
+

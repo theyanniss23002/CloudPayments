@@ -8,7 +8,10 @@ let vw = (coef) => window.innerWidth * (coef / 100);
 function showScroll() {
   setTimeout(function () {
     $('.intro__wrap-cursor').css('opacity', '1');
-    $('body').css('overflow-y', 'scroll')
+    $('body').css({
+      'overflow-y': 'scroll',
+      'width': '100%'
+    });
   }, 600)
 }
 
