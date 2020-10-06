@@ -19,6 +19,7 @@ npm install {all dependence} --save-dev
     webpack
     webpack-cli
     webpack-dev-server
+    file-loader
 #
 
 npm install {all dependence} --save
@@ -33,7 +34,7 @@ How to use
 -
 Get started:
 
-    npm run start
+    npm run dev
 
 Get build:
  

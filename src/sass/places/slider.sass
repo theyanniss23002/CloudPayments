@@ -1,106 +1,84 @@
-.carousel-case
-  background: transparent
-  display: none
-
 .slider
-  position: relative
-  height: 100vh
-  display: flex
+  display: none
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
   flex-direction: column
-  justify-content: flex-end
-  &__box
-    position: absolute
-    bottom: 2%
-    right: 2%
-    z-index: 20
-    &-prev
-      width: 8vw
-      height: 7vh
-      background: #06223B
-      border: 0
-      cursor: pointer
-      background: linear-gradient(45deg, transparent 1vw, #06223B 0) bottom left
-      transition: .2s
-      &::before
-        content: ''
-        display: block
-        margin: 0 auto
-        width: 1vw
-        background-size: 1vw
-        height: 1.7vw
-        background-repeat: no-repeat
-        background-image: url('/src/image/arrow-left.svg')
-      &:hover
-        background: linear-gradient(45deg, transparent 1vw, #F7DF14 0) bottom left
-        transition: .3s
-    &-next
-      width: 8vw
-      height: 7vh
-      background: #06223B
-      border: 0
-      cursor: pointer
-      background: linear-gradient(-45deg, transparent 1vw, #06223B 0) top right
-      transition: .2s
-      &::before
-        content: ''
-        display: block
-        margin: 0 auto
-        width: 1vw
-        background-size: 1vw
-        height: 1.7vw
-        background-repeat: no-repeat
-        background-image: url('/src/image/arrow-right.svg')
-      &:hover
-        background: linear-gradient(-45deg, transparent 1vw, #F7DF14 0) top right
-        transition: .3s
-
+  justify-content: flex-start
+  backdrop-filter: blur(5px)
+  &.active
+    display: flex
+    width: 100%
+    border-radius: 3px
+    margin: auto
+    padding: 20vw
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    //height: fit-content
+  &.active-full
+    display: flex
+    width: 100%
+    border-radius: 3px
+    margin: auto
+    padding: 20vw
+    flex-direction: column
+    align-items: center
+    justify-content: center
+    //height: fit-content
+    overflow-y: scroll
 .slideshow
   &__img
-    width: 100vw
-    height: 85vh
+    width: 100%
+    height: auto
   &__card
+    display: none
     position: relative
     &-desc
       position: relative
-      height: 15vh
-      background: rgba(0, 0, 0, 0.3)
+      height: 14vh
+      //background: rgba(0, 0, 0, 0.3)
+      background: #091627
       display: flex
       align-items: center
-      padding: 0 3vw
+      padding: 0 1vw
       &-title
-        font-size: 1.8vw
+        font-size: 2vh
         color: #fff
         font-weight: bold
-        font-family: $sliderFont
+        font-family: $sliderBold
       &-info
-        font-size: 0.8vw
+        font-size: 1.2vh
         color: #B6B7B5
-        line-height: 1.6vh
-        padding-top: 1vh
-        font-family: $sliderFont
+        line-height: 1.4
+        padding-top: 0.3vh
+        font-family: StolzlRegular, sans-serif
       &-wrap
         display: flex
         flex-direction: column
-        margin-left: 2vw
-        max-width: 39vw
+        margin-left: 1vw
+        max-width: 70vw
         width: 100%
       &-img
-        width: 7vw
+        width: 5.5vw
       &-link
-        position: absolute
-        bottom: 17%
-        right: 3%
-        font-size: 1.1vw
+        display: flex
+        align-items: flex-end
+        height: 100%
+        padding-bottom: 2vh
+        font-size: 1.2vh
         color: #5EB1FF
         text-decoration: underline
         transition: .4s
-        font-family: $sliderFont
+        font-family: $sliderNormal
         &:hover
           color: #F7DF14
           transition: .2s
       &-close
-        width: 3.5vw
-        height: 6vh
+        width: 3vw
+        height: 5vh
         display: flex
         align-items: center
         background: #072847
@@ -116,7 +94,7 @@
           background-size: 1vw
           height: 1.2vw
           background-repeat: no-repeat
-          background-image: url('/src/image/close.svg')
+          background-image: url('~images/close.svg')
         &:hover
           background: #5EB1FF
           transition: .2s
@@ -125,10 +103,10 @@
   position: relative
   &-ring
     position: absolute
-    top: 15%
+    top: 20.5%
     left: 0
-    width: 97vw
-    height: 31.3vh
+    width: 55vw
+    height: 21.3vh
     &:hover + .coin-ring-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -146,12 +124,12 @@
       background: rgba(0,0,0,.8)
       transform: translate(-50%,1em)
       transition: all .15s ease-in-out
-      border: 0.2vw solid #fff
+      border: 0.1vw solid #fff
   &-shuttle
     position: absolute
-    width: 18vw
-    left: 18%
-    top: 15%
+    width: 13vw
+    left: 17%
+    top: 16%
     &:hover + .coin-shuttle-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -169,60 +147,60 @@
       background: rgba(0,0,0,.8)
       transform: translate(-50%,1em)
       transition: all .15s ease-in-out
-      border: 0.2vw solid #fff
+      border: 0.1vw solid #fff
   &-mobile
     &-1
       position: absolute
       bottom: 7%
       left: 11%
-      width: 7vw
+      width: 4vw
     &-3
       position: absolute
-      bottom: 13%
+      bottom: 17%
       left: 24%
-      width: 7vw
+      width: 4vw
     &-4
       position: absolute
       bottom: 6%
       left: 34%
-      width: 7vw
+      width: 4vw
   &-chameleon
     &-1
       position: absolute
       bottom: 5%
       left: 50%
-      width: 7vw
+      width: 4vw
     &-3
       position: absolute
       bottom: 24%
       right: 29%
-      width: 9vw
+      width: 5vw
     &-4
       position: absolute
       bottom: 17%
       right: 21%
-      width: 9vw
+      width: 5vw
     &-5
       position: absolute
       bottom: 2%
       right: 26%
-      width: 7vw
+      width: 4vw
     &-6
       position: absolute
       bottom: 20%
       right: 8%
-      width: 11vw
+      width: 6vw
     &-7
       position: absolute
       bottom: 1%
       right: 12%
-      width: 8vw
+      width: 5vw
   &-ball
     position: absolute
     z-index: 10
-    top: 15%
+    top: 18%
     right: 23%
-    width: 32vw
+    width: 17vw
     &:hover + .coin-ball-hover
       opacity: 1
       transform: translate(-50%, 0)
@@ -240,19 +218,21 @@
       background: rgba(0,0,0,.8)
       transform: translate(-50%,1em)
       transition: all .15s ease-in-out
-      border: 0.2vw solid #fff
+      border: 0.1vw solid #fff
       &-title
         font-size: 2vw
         color: #fff
-        font-family: $sliderFont
+        font-family: StolzlRegular, sans-serif
         font-weight: bold
-        line-height: 3vh
+        line-height: 1.2
       &-subtitle
         font-size: 1vw
-        line-height: 2vh
+        line-height: 1.2
         color: #B6B7B5
         padding-top: 2vh
-        font-family: $sliderFont
+        font-family: StolzlRegular, sans-serif
+        @media screen and (max-width: 1199px)
+          font-size: 1.3vw
   &-hand
     position: absolute
     z-index: 11
@@ -260,12 +240,11 @@
     right: 41%
     width: 5vw
 
-
 .coin-mobile
   position: absolute
-  bottom: 1%
+  bottom: 2%
   left: 19%
-  width: 7vw
+  width: 8vw
   z-index: 50
   &:hover + .coin-mobile-hover
     opacity: 1
@@ -284,13 +263,13 @@
     background: rgba(0,0,0,.8)
     transform: translate(-50%,1em)
     transition: all .15s ease-in-out
-    border: 0.2vw solid #fff
+    border: 0.1vw solid #fff
 
 .coin-chameleon
   position: absolute
   bottom: 10%
   left: 58%
-  width: 9vw
+  width: 7vw
   &:hover + .coin-chameleon-hover
     opacity: 1
     transform: translate(-50%, 0)
@@ -308,4 +287,11 @@
     background: rgba(0,0,0,.8)
     transform: translate(-50%,1em)
     transition: all .15s ease-in-out
-    border: 0.2vw solid #fff
+    border: 0.1vw solid #fff
+
+@media (max-width: 700px)
+  .slider
+    &.active-full
+      height: auto
+    &.active
+      height: auto
