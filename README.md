@@ -2,7 +2,7 @@
 
 ## `Author by theYanniss`
 
-npm install {all dependence} --save-dev 
+npm install --save-dev 
 -
     autoprefixer
     clean-webpack-plugin
@@ -24,7 +24,7 @@ npm install {all dependence} --save-dev
     webpack-dev-server
 #
 
-npm install {all dependence} --save
+npm install --save
 -
     animate.css
     gsap
