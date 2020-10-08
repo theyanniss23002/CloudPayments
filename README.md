@@ -6,9 +6,12 @@ npm install {all dependence} --save-dev
 -
     autoprefixer
     clean-webpack-plugin
+    copy-webpack-plugin
     css-loader
     css-mqpacker
     cssnano
+    file-loader
+    html-loader
     html-webpack-plugin
     mini-css-extract-plugin
     node-sass
@@ -19,7 +22,6 @@ npm install {all dependence} --save-dev
     webpack
     webpack-cli
     webpack-dev-server
-    file-loader
 #
 
 npm install {all dependence} --save
