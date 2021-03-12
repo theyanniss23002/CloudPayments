@@ -2,13 +2,16 @@
 
 ## `Author by theYanniss`
 
-npm install {all dependence} --save-dev 
+npm install --save-dev 
 -
     autoprefixer
     clean-webpack-plugin
+    copy-webpack-plugin
     css-loader
     css-mqpacker
     cssnano
+    file-loader
+    html-loader
     html-webpack-plugin
     mini-css-extract-plugin
     node-sass
@@ -21,7 +24,7 @@ npm install {all dependence} --save-dev
     webpack-dev-server
 #
 
-npm install {all dependence} --save
+npm install --save
 -
     animate.css
     gsap
@@ -33,7 +36,7 @@ How to use
 -
 Get started:
 
-    npm run start
+    npm run dev
 
 Get build:
  
